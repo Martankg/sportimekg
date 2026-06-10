@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sportime - Твое время. Твой спорт. Твои победы.</title>
+<title>SPORTIME - Твое время. Твой спорт. Твои победы.</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
@@ -19,126 +20,320 @@ color:#fff;
 }
 
 header{
-background:#111;
-padding:20px 10%;
+background:#0b0b0b;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:15px 8%;
 border-bottom:2px solid #d8ff00;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo img{
-height:60px;
-width:auto;
+height:70px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#d8ff00;
 }
 
 .hero{
-height:500px;
+height:600px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2000');
+background-size:cover;
+background-position:center;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
+padding:0 10%;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero-tag{
+color:#d8ff00;
+font-size:14px;
+font-weight:bold;
+letter-spacing:2px;
+margin-bottom:15px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:58px;
+line-height:1.1;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:24px;
-color:#d8ff00;
-}
-
-.news{
-padding:60px 10%;
-}
-
-.news h2{
+font-size:20px;
+color:#ddd;
 margin-bottom:30px;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#d8ff00;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
 }
 
-.card{
+.section{
+padding:70px 10%;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
+}
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.news-card{
 background:#111;
-padding:20px;
-border-radius:10px;
+border-radius:12px;
+overflow:hidden;
+transition:0.3s;
 border:1px solid #222;
 }
 
-.card h3{
+.news-card:hover{
+transform:translateY(-5px);
+border-color:#d8ff00;
+}
+
+.news-image{
+height:180px;
+background:#222;
+}
+
+.news-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.news-content{
+padding:20px;
+}
+
+.news-content h3{
 margin-bottom:10px;
 color:#d8ff00;
 }
 
+.matches{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.box{
+background:#111;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+}
+
+.box h3{
+color:#d8ff00;
+margin-bottom:20px;
+}
+
+.match{
+padding:12px 0;
+border-bottom:1px solid #222;
+}
+
+.table-row{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #222;
+}
+
 footer{
-padding:30px;
+margin-top:80px;
+padding:40px;
 text-align:center;
 border-top:1px solid #222;
-margin-top:50px;
+color:#999;
 }
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+height:auto;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.matches{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">
-    <img src="logo.png" alt="Sportime Logo" height="140">
+<img src="logo.png" alt="SPORTIME">
 </div>
 
 <nav>
 <a href="#">Главная</a>
 <a href="#">Футбол</a>
+<a href="#">Кыргызстан</a>
 <a href="#">Матчи</a>
 <a href="#">Таблицы</a>
 <a href="#">Контакты</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<h1>⚽ Добро пожаловать в SPORTIME</h1>
-<p>Главные новости футбола Кыргызстана и мира</p>
+
+<div class="hero-content">
+
+<div class="hero-tag">
+ГЛАВНАЯ НОВОСТЬ
+</div>
+
+<h1>
+Сборная Кыргызстана готовится к важным матчам сезона
+</h1>
+
+<p>
+Главные новости футбола Кыргызстана и мирового спорта в одном месте.
+</p>
+
+<a href="#" class="btn">
+Читать подробнее
+</a>
+
+</div>
+
 </section>
 
-<section class="news">
-<h2>Последние новости</h2>
+<section class="section">
 
-<div class="cards">
+<h2 class="section-title">
+Последние новости
+</h2>
 
-<div class="card">
+<div class="news-grid">
+
+<div class="news-card">
+<div class="news-image">
+<img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=1200">
+</div>
+<div class="news-content">
 <h3>Кыргызский футбол</h3>
-<p>Последние новости чемпионата Кыргызстана.</p>
+<p>Новости чемпионата Кыргызстана и национальной сборной.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="news-card">
+<div class="news-image">
+<img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=1200">
+</div>
+<div class="news-content">
 <h3>Лига Чемпионов</h3>
-<p>Результаты матчей и аналитика.</p>
+<p>Результаты матчей и аналитика европейского футбола.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="news-card">
+<div class="news-image">
+<img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1200">
+</div>
+<div class="news-content">
 <h3>АПЛ</h3>
-<p>Новости английской Премьер-лиги.</p>
+<p>Все главные новости английской Премьер-лиги.</p>
+</div>
 </div>
 
 </div>
+
+</section>
+
+<section class="section">
+
+<div class="matches">
+
+<div class="box">
+
+<h3>⚽ Матчи дня</h3>
+
+<div class="match">Барселона — Реал Мадрид</div>
+<div class="match">Манчестер Сити — Ливерпуль</div>
+<div class="match">Бавария — Боруссия</div>
+<div class="match">ПСЖ — Марсель</div>
+
+</div>
+
+<div class="box">
+
+<h3>🏆 Турнирная таблица</h3>
+
+<div class="table-row"><span>1. Реал Мадрид</span><span>85</span></div>
+<div class="table-row"><span>2. Барселона</span><span>81</span></div>
+<div class="table-row"><span>3. Атлетико</span><span>77</span></div>
+<div class="table-row"><span>4. Вильярреал</span><span>69</span></div>
+<div class="table-row"><span>5. Бетис</span><span>66</span></div>
+
+</div>
+
+</div>
+
 </section>
 
 <footer>
+
 © 2026 SPORTIME.KG
+
+<br><br>
+
+Твое время. Твой спорт. Твои победы.
+
 </footer>
 
 </body>
